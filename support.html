@@ -1,0 +1,45 @@
+<main>
+  <section class="hero">
+    <h1>TR-1 Support & Service</h1>
+    <p>If your Regency TR-1 needs a little tuning help, battery advice, or repair, this support page is here for you.</p>
+    <p>Check the quick tips below or send a message through the support form.</p>
+  </section>
+
+  <section>
+    <h2>Quick Help Tips</h2>
+    <ul>
+      <li>If reception is weak, fully extend the antenna and rotate the radio slowly to find the strongest signal.</li>
+      <li>If sound fades, replace the 22.5V battery and make sure the contacts are clean.</li>
+      <li>Keep the radio away from heavy metal objects and thick walls when listening indoors.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Request Support</h2>
+    <form id="support-form">
+      <fieldset>
+        <legend>Contact Our Service Team</legend>
+
+        <label for="support-name">Name:</label>
+        <input type="text" id="support-name" name="support-name" required>
+
+        <label for="support-email">Email:</label>
+        <input type="email" id="support-email" name="support-email" required>
+
+        <label for="support-issue">Issue Type:</label>
+        <select id="support-issue" name="support-issue" required>
+          <option value="">Please choose…</option>
+          <option value="reception">Reception problem</option>
+          <option value="battery">Battery or power issue</option>
+          <option value="audio">Audio or volume issue</option>
+          <option value="other">Something else</option>
+        </select>
+
+        <label for="support-message">Describe the problem:</label>
+        <textarea id="support-message" name="support-message" rows="5" required></textarea>
+
+        <button type="submit">Send Support Request</button>
+      </fieldset>
+    </form>
+  </section>
+</main>

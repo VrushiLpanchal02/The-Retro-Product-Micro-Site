@@ -1,0 +1,20 @@
+<section class="reviews-grid">
+    <div class="review-card">
+        <h3>⭐⭐⭐⭐⭐ "Life Changing!"</h3>
+        <p>"Take radio anywhere! Baseball games, picnics... amazing!" - Bob S.</p>
+    </div>
+</section>
+<form id="review-form">
+    <fieldset>
+        <legend>Share Your TR-1 Experience</legend>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <p>Rating: 
+            <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label>
+            <!-- etc -->
+        </p>
+        <textarea id="comment" placeholder="Tell us about your TR-1!" required></textarea>
+        <button type="submit">Submit Review</button>
+    </fieldset>
+</form>
+<div id="thank-you" style="display:none;"></div>
