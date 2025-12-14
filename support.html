@@ -1,45 +1,378 @@
-<main>
-  <section class="hero">
-    <h1>TR-1 Support & Service</h1>
-    <p>If your Regency TR-1 needs a little tuning help, battery advice, or repair, this support page is here for you.</p>
-    <p>Check the quick tips below or send a message through the support form.</p>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Warranty - Regency TR-1 Transistor Radio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>REGENCY</h1>
+                    <span class="tagline">The Future of Radio</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About TR-1</a></li>
+                    <li><a href="feedback.html">Reviews</a></li>
+                    <li><a href="support.html" class="active">Support</a></li>
+                    <li><a href="corporate.html">Company</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <section>
-    <h2>Quick Help Tips</h2>
-    <ul>
-      <li>If reception is weak, fully extend the antenna and rotate the radio slowly to find the strongest signal.</li>
-      <li>If sound fades, replace the 22.5V battery and make sure the contacts are clean.</li>
-      <li>Keep the radio away from heavy metal objects and thick walls when listening indoors.</li>
-    </ul>
-  </section>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Support & Warranty</h1>
+                <p class="page-subtitle">We're here to help you get the most out of your Regency TR-1</p>
+            </div>
+        </section>
 
-  <section>
-    <h2>Request Support</h2>
-    <form id="support-form">
-      <fieldset>
-        <legend>Contact Our Service Team</legend>
+        <section class="warranty-info">
+            <div class="container">
+                <h2>Regency TR-1 Warranty Coverage</h2>
+                <div class="warranty-grid">
+                    <div class="warranty-card">
+                        <h3> 90-Day Standard Warranty</h3>
+                        <p>Every Regency TR-1 comes with our comprehensive 90-day warranty covering all manufacturing defects and component failures under normal use.</p>
+                        <ul>
+                            <li>Free repair or replacement of defective parts</li>
+                            <li>No charge for labor during warranty period</li>
+                            <li>Express service available</li>
+                            <li>Warranty coverage begins from date of purchase</li>
+                        </ul>
+                    </div>
+                    <div class="warranty-card">
+                        <h3> Extended Protection Plan</h3>
+                        <p>For additional peace of mind, purchase our Extended Protection Plan and enjoy extended coverage for up to two full years.</p>
+                        <ul>
+                            <li>Coverage for accidental damage</li>
+                            <li>Battery replacement service</li>
+                            <li>Priority customer support</li>
+                            <li>Only $7.95 for full two-year protection</li>
+                        </ul>
+                        <button class="btn-extended-plan" onclick="showExtendedPlan()">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <label for="support-name">Name:</label>
-        <input type="text" id="support-name" name="support-name" required>
+        <section class="troubleshooting">
+            <div class="container">
+                <h2>Troubleshooting Guide</h2>
+                <p>Most common issues can be resolved quickly using the solutions below. If these don't help, contact our support team.</p>
+                
+                <div class="troubleshooting-grid">
+                    <div class="trouble-item">
+                        <h3> No Sound or Weak Audio</h3>
+                        <div class="solution-steps">
+                            <p><strong>Possible Causes & Solutions:</strong></p>
+                            <ol>
+                                <li>Check that the power switch is in the "ON" position</li>
+                                <li>Verify the volume control is not set to minimum</li>
+                                <li>Test with a fresh 9-volt battery</li>
+                                <li>Ensure the speaker is not obstructed<li>Try adjusting</li>
+                                 the tuning dial to a stronger signal</li>
+                            </ol>
+                        </div>
+                    </div>
 
-        <label for="support-email">Email:</label>
-        <input type="email" id="support-email" name="support-email" required>
+                    <div class="trouble-item">
+                        <h3> Poor Reception or Static</h3>
+                        <div class="solution-steps">
+                            <p><strong>Possible Causes & Solutions:</strong></p>
+                            <ol>
+                                <li>Retune to the desired station slowly and carefully</li>
+                                <li>Move the radio away from fluorescent lights or motors</li>
+                                <li>Try rotating the radio for better antenna alignment</li>
+                                <li>Check that the telescoping antenna (if equipped) is extended</li>
+                                <li>Verify you're within range of the station's broadcast</li>
+                            </ol>
+                        </div>
+                    </div>
 
-        <label for="support-issue">Issue Type:</label>
-        <select id="support-issue" name="support-issue" required>
-          <option value="">Please choose…</option>
-          <option value="reception">Reception problem</option>
-          <option value="battery">Battery or power issue</option>
-          <option value="audio">Audio or volume issue</option>
-          <option value="other">Something else</option>
-        </select>
+                    <div class="trouble-item">
+                        <h3> Battery Drains Quickly</h3>
+                        <div class="solution-steps">
+                            <p><strong>Possible Causes & Solutions:</strong></p>
+                            <ol>
+                                <li>Use only fresh, high-quality 9-volt batteries</li>
+                                <li>Turn off the radio when not in use</li>
+                                <li>Lower the volume to reduce power consumption</li>
+                                <li>Check for corrosion on battery terminals</li>
+                                <li>Consider purchasing our Extended Protection Plan for battery replacement</li>
+                            </ol>
+                        </div>
+                    </div>
 
-        <label for="support-message">Describe the problem:</label>
-        <textarea id="support-message" name="support-message" rows="5" required></textarea>
+                    <div class="trouble-item">
+                        <h3> Tuning Dial Stiff or Unresponsive</h3>
+                        <div class="solution-steps">
+                            <p><strong>Possible Causes & Solutions:</strong></p>
+                            <ol>
+                                <li>Gently clean around the tuning dial with a soft cloth</li>
+                                <li>Ensure hands are clean and dry when operating</li>
+                                <li>Avoid forcing the dial if it meets resistance</li>
+                                <li>If problem persists, contact service center</li>
+                            </ol>
+                        </div>
+                    </div>
 
-        <button type="submit">Send Support Request</button>
-      </fieldset>
-    </form>
-  </section>
-</main>
+                    <div class="trouble-item">
+                        <h3> Intermittent Operation</h3>
+                        <div class="solution-steps">
+                            <p><strong>Possible Causes & Solutions:</strong></p>
+                            <ol>
+                                <li>Check battery connections are secure</li>
+                                <li>Remove and reinstall the battery</li>
+                                <li>Look for loose internal connections (do not attempt internal repair)</li>
+                                <li>Try a different location to rule out interference</li>
+                                <li>If issue continues, service may be required</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="trouble-item">
+                        <h3> Earphone Not Working</h3>
+                        <div class="solution-steps">
+                            <p><strong>Possible Causes & Solutions:</strong></p>
+                            <ol>
+                                <li>Ensure earphone plug is fully inserted into jack</li>
+                                <li>Test with different earphones if available</li>
+                                <li>Check earphone cord for breaks or damage</li>
+                                <li>Verify volume is at appropriate level</li>
+                                <li>Note: Internal speaker mutes when earphones are connected</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="care-maintenance">
+            <div class="container">
+                <h2>Care & Maintenance</h2>
+                <div class="maintenance-grid">
+                    <div class="maintenance-item">
+                        <h3> Battery Care</h3>
+                        <ul>
+                            <li>Remove battery if radio won't be used for extended period</li>
+                            <li>Store unused batteries in cool, dry place</li>
+                            <li>Replace battery when sound becomes distorted or weak</li>
+                            <li>Never mix old and new batteries</li>
+                            <li>Dispose of dead batteries properly at recycling centers</li>
+                        </ul>
+                    </div>
+                    <div class="maintenance-item">
+                        <h3> Cleaning</h3>
+                        <ul>
+                            <li>Clean exterior with soft, dry cloth only</li>
+                            <li>Never use water or chemical cleaners on the radio</li>
+                            <li>Keep tuning dial free of dirt and debris</li>
+                            <li>Clean battery compartment contacts as needed</li>
+                            <li>Store in dust-free environment when not in use</li>
+                        </ul>
+                    </div>
+                    <div class="maintenance-item">
+                        <h3> Important Safety Notes</h3>
+                        <ul>
+                            <li>Do not attempt to open the radio case</li>
+                            <li>Avoid dropping or subjecting to strong impacts</li>
+                            <li>Keep away from moisture and high humidity</li>
+                            <li>Do not expose to extreme temperatures</li>
+                            <li>For repairs, always use authorized Regency service centers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-centers">
+            <div class="container">
+                <h2>Authorized Service Centers</h2>
+                <p>For warranty service or repairs, please visit one of our authorized service centers across the country.</p>
+                
+                <div class="service-grid">
+                    <div class="service-center">
+                        <h4>Northeast Region</h4>
+                        <p><strong>Regency Service Center</strong><br>
+                        123 Radio Row<br>
+                        New York, NY 10002<br>
+                        Phone: (212) 555-0100<br>
+                        Hours: Mon-Fri 9AM-5PM</p>
+                    </div>
+                    <div class="service-center">
+                        <h4>Southeast Region</h4>
+                        <p><strong>Atlanta Service Center</strong><br>
+                        456 Electronics Blvd<br>
+                        Atlanta, GA 30309<br>
+                        Phone: (404) 555-0200<br>
+                        Hours: Mon-Fri 9AM-5PM</p>
+                    </div>
+                    <div class="service-center">
+                        <h4>Midwest Region</h4>
+                        <p><strong>Chicago Service Center</strong><br>
+                        789 Technology Drive<br>
+                        Chicago, IL 60601<br>
+                        Phone: (312) 555-0300<br>
+                        Hours: Mon-Fri 9AM-5PM</p>
+                    </div>
+                    <div class="service-center">
+                        <h4>Southwest Region</h4>
+                        <p><strong>Dallas Service Center</strong><br>
+                        321 Innovation Way<br>
+                        Dallas, TX 75201<br>
+                        Phone: (214) 555-0400<br>
+                        Hours: Mon-Fri 9AM-5PM</p>
+                    </div>
+                    <div class="service-center">
+                        <h4>West Region</h4>
+                        <p><strong>Los Angeles Service Center</strong><br>
+                        654 Sunset Boulevard<br>
+                        Los Angeles, CA 90028<br>
+                        Phone: (213) 555-0500<br>
+                        Hours: Mon-Fri 9AM-5PM</p>
+                    </div>
+                    <div class="service-center">
+                        <h4>Pacific Northwest</h4>
+                        <p><strong>Seattle Service Center</strong><br>
+                        987 Pioneer Square<br>
+                        Seattle, WA 98104<br>
+                        Phone: (206) 555-0600<br>
+                        Hours: Mon-Fri 9AM-5PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-support">
+            <div class="container">
+                <h2>Contact Customer Support</h2>
+                <div class="contact-grid">
+                    <div class="contact-method">
+                        <h3> Phone Support</h3>
+                        <p><strong>Main Line:</strong> 1-800-REGENCY (1-800-734-3629)</p>
+                        <p><strong>Hours:</strong> Monday-Friday, 8AM-6PM Central Time</p>
+                        <p><strong>Weekend:</strong> Saturday 9AM-3PM Central Time</p>
+                        <p>Our friendly support staff is ready to help with any questions about your TR-1.</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3> Mail Support</h3>
+                        <p><strong>Address:</strong><br>
+                        Regency Customer Service<br>
+                        P.O. Box 5000<br>
+                        Dallas, TX 75201</p>
+                        <p>Please include your name, address, phone number, and detailed description of any issues.</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3> Support Form</h3>
+                        <p>For faster service, fill out our online support request form:</p>
+                        <button class="btn-support-form" onclick="openSupportForm()">Open Support Form</button>
+                        <p>Response time: 24-48 hours for most inquiries</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            How long does the battery typically last?
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>With normal use (2-3 hours per day), a fresh 9-volt battery should last 2-3 weeks. Continuous use will give you approximately 20-25 hours of operation. Battery life varies based on volume level and signal strength.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Can I use rechargeable batteries?
+                            <span class="faq-toggle"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can use rechargeable 9-volt batteries. However, they may provide slightly shorter operating time compared to fresh alkaline batteries. We recommend high-quality rechargeable batteries for best performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            What's the warranty on replacement parts?
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All replacement parts and repairs are covered by our 90-day warranty from the date of service. This covers both parts and labor for any defects in the repair work.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            How do I know if my radio needs service?
+                            <span class="faq-toggle"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contact us if you experience: no sound despite fresh battery, persistent static or poor reception, intermittent operation, physical damage, or if troubleshooting steps haven't resolved the issue.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Can I get replacement parts for my older TR-1?
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we maintain a parts inventory for all Regency TR-1 models. Common replacement parts include batteries, earphones, and tuning components. Contact our service department for availability and pricing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Regency</h4>
+                    <p>1-800-REGENCY<br>
+                    Dallas, Texas<br>
+                    regency@radios.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Special Offers</a></li>
+                        <li><a href="about.html">Product Details</a></li>
+                        <li><a href="feedback.html">Customer Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="corporate.html">About Regency</a></li>
+                        <li><a href="support.html">Service Centers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1954 Regency Radio Company. All rights reserved. | Made in USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
