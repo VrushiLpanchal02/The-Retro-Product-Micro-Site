@@ -1,0 +1,297 @@
+/* 
+  Regency TR-1 Website - Retro Styling
+  Handles layout, colors, typography, and basic components.
+*/
+
+/* Reset and base layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f5dc 0%, #e8e8e8 100%);
+  color: #000;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header and navigation */
+header {
+  background: linear-gradient(90deg, #cc0000, #ff6600);
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#globalNav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#globalNav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#globalNav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: left 0.3s ease;
+}
+
+#globalNav a:hover::before {
+  left: 0;
+}
+
+#globalNav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#globalNav .active {
+  background: #ffd700;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle, #fff 0%, #f0f0f0 100%);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #cc0000;
+  text-shadow: 3px 3px 0 #ffd700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(45deg, #cc0000, #ff6600);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Product gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 4px solid #ffd700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thumbs img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#main-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 6px solid #cc0000;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+fieldset {
+  border: 3px solid #cc0000;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+legend {
+  font-size: 1.3rem;
+  color: #cc0000;
+  padding: 0 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* Reviews layout */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.review-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-left: 6px solid #ffd700;
+}
+
+/* Star rating widget */
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  font-size: 1.6rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+/* hover fills stars to the left */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffd700;
+  transform: translateY(-1px);
+}
+
+/* checked fills selected stars */
+.star-rating input:checked ~ label {
+  color: #ffd700;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #globalNav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
