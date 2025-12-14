@@ -1,20 +1,322 @@
-<section class="reviews-grid">
-    <div class="review-card">
-        <h3>⭐⭐⭐⭐⭐ "Life Changing!"</h3>
-        <p>"Take radio anywhere! Baseball games, picnics... amazing!" - Bob S.</p>
-    </div>
-</section>
-<form id="review-form">
-    <fieldset>
-        <legend>Share Your TR-1 Experience</legend>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <p>Rating: 
-            <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐</label>
-            <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label>
-            <!-- etc -->
-        </p>
-        <textarea id="comment" placeholder="Tell us about your TR-1!" required></textarea>
-        <button type="submit">Submit Review</button>
-    </fieldset>
-</form>
-<div id="thank-you" style="display:none;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regency TR-1 Reviews & Ratings</title>
+    <link rel="stylesheet" href="reviews-styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <h1>REGENCY</h1>
+                <p class="slogan">The Future of Radio</p>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About TR-1</a></li>
+                    <li><a href="feedback.html" class="current">Reviews</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="corporate.html">Company</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Customer Reviews & Ratings</h1>
+                <p class="page-subtitle">Discover what early adopters think about the Regency TR-1</p>
+            </div>
+        </section>
+
+        <section class="overall-rating">
+            <div class="container">
+                <div class="rating-summary">
+                    <div class="rating-score">
+                        <span class="score-number">4.8</span>
+                        <div class="stars-display">
+                            <span class="star filled"></span>
+                            <span class="star filled"></span>
+                            <span class="star filled"></span>
+                            <span class="star filled"></span>
+                            <span class="star half"></span>
+                        </div>
+                        <p>Based on 1,247 reviews</p>
+                    </div>
+                    <div class="rating-breakdown">
+                        <div class="rating-bar">
+                            <span class="rating-label">5 stars</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 82%"></div>
+                            </div>
+                            <span class="rating-count">1,022</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">4 stars</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 13%"></div>
+                            </div>
+                            <span class="rating-count">162</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">3 stars</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 3%"></div>
+                            </div>
+                            <span class="rating-count">37</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">2 stars</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 1%"></div>
+                            </div>
+                            <span class="rating-count">12</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">1 star</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 1%"></div>
+                            </div>
+                            <span class="rating-count">14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-form-section">
+            <div class="container">
+                <h2>Share Your Experience</h2>
+                <p>Help others by sharing your thoughts about the Regency TR-1</p>
+                <form class="review-form" id="reviewForm">
+                    <div class="form-group">
+                        <label for="customerName">Your Name:</label>
+                        <input type="text" id="customerName" name="customerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerLocation">Location (City, State):</label>
+                        <input type="text" id="customerLocation" name="customerLocation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating:</label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="ratingValue" name="rating" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewTitle">Review Title:</label>
+                        <input type="text" id="reviewTitle" name="reviewTitle" required placeholder="Brief summary of your experience">
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">Your Review:</label>
+                        <textarea id="reviewText" name="reviewText" required placeholder="Tell us about your experience with the TR-1..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="verifiedPurchase" name="verifiedPurchase" checked disabled>
+                        <label for="verifiedPurchase">I purchased this product directly from Regency</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Review</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="customer-reviews">
+            <div class="container">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-filter">
+                    <button class="filter-btn active" data-filter="all">All Reviews</button>
+                    <button class="filter-btn" data-filter="5">5 Stars</button>
+                    <button class="filter-btn" data-filter="4">4 Stars</button>
+                    <button class="filter-btn" data-filter="3">3 Stars</button>
+                    <button class="filter-btn" data-filter="2">2 Stars</button>
+                    <button class="filter-btn" data-filter="1">1 Star</button>
+                </div>
+                <div class="reviews-container" id="reviewsContainer">
+                    <div class="review-item" data-rating="5">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Margaret Sullivan</h4>
+                                <span class="location">Boston, MA</span>
+                                <span class="review-date">December 18, 1954</span>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars"></span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>"Absolutely Revolutionary - Beyond My Wildest Dreams!"</h5>
+                            <p>I still can't believe something so small can produce such incredible sound quality. I've been using tube radios for 20 years, and this little TR-1 sounds better than most of them! The reception is crystal clear, and the fact that I can take it anywhere is just amazing. My husband got one for me for Christmas, and it's the best gift he's ever given. I take it to the kitchen while cooking, out to the garden, and even on walks in the neighborhood. The battery seems to last forever too - it's been two weeks and still going strong!</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="helpful-count">127 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    <div class="review-item" data-rating="5">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Robert Chen</h4>
+                                <span class="location">San Francisco, CA</span>
+                                <span class="review-date">December 15, 1954</span>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars"></span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>"Technology That Actually Works!"</h5>
+                            <p>As an electrical engineer, I'm fascinated by the transistor technology, but what really matters is how it performs - and it performs brilliantly. The sound quality is impressive for such a small speaker, and the tuning is precise and stable. I've compared it side-by-side with my expensive console radio, and while the TR-1 can't match the bass response, the overall clarity and detail is surprisingly good. For the price and size, this is an engineering marvel. Highly recommended!</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="helpful-count">89 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    <div class="review-item" data-rating="4">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Betty Williams</h4>
+                                <span class="location">Dallas, TX</span>
+                                <span class="review-date">December 12, 1954</span>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">★★★★☆</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>"Great Radio, Minor Tuning Issues"</h5>
+                            <p>I love my TR-1! It's so convenient to have in the bedroom without all the cords. The sound is clear and loud enough for my needs. My only complaint is that the tuning can be a bit touchy sometimes - you have to be very precise with the dial to get the best reception. Once you find a station, it stays tuned well, but finding that sweet spot takes some practice. Overall, I'm very happy with this purchase and would recommend it to friends.</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="helpful-count">56 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    <div class="review-item" data-rating="5">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>James Rodriguez</h4>
+                                <span class="location">Miami, FL</span>
+                                <span class="review-date">December 10, 1954</span>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars"></span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>"Perfect for Beach Days!"</h5>
+                            <p>This little radio has been a game-changer for our family beach trips. My kids love listening to the ballgame while we're building sandcastles, and I can catch the news while keeping an eye on everyone. It's small enough to fit in my beach bag and tough enough to handle a little sand. The battery life is impressive - we used it all day Saturday and it's still working Sunday morning. Worth every penny!</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="helpful-count">73 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    <div class="review-item" data-rating="3">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Thomas Anderson</h4>
+                                <span class="location">Chicago, IL</span>
+                                <span class="review-date">December 8, 1954</span>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars"></span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>"Good Concept, Could Use Improvement"</h5>
+                            <p>The TR-1 is definitely innovative and works as advertised. I appreciate having a portable radio, and the sound quality is decent. However, I expected a bit more volume for a $40 radio. It's fine for personal listening but not loud enough for group settings. Also, the tuning knob is quite small and can be hard to grip. These are minor issues, but worth mentioning. I think with a few tweaks, this could be an exceptional product.</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="helpful-count">34 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    <div class="review-item" data-rating="5">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Mary Johnson</h4>
+                                <span class="location">Seattle, WA</span>
+                                <span class="review-date">December 5, 1954</span>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>"College Student Lifesaver!"</h5>
+                            <p>As a college student, this radio has been perfect for my dorm room. I can't have a TV, and this gives me access to music, news, and my favorite radio shows without bothering my roommates. The earphone jack is a great feature for late-night listening. The only downside is that sometimes the reception can be spotty depending on where I place it in my room, but that might be due to the building's construction rather than the radio itself.</p>
+                        </div>
+                        <div class="review-footer">
+                            <span class="helpful-count">91 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2>Customer Satisfaction Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">97%</span>
+                        <span class="stat-label">Would recommend to friends</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">Satisfied with sound quality</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">92%</span>
+                        <span class="stat-label">Happy with battery life</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">89%</span>
+                        <span class="stat-label">Find it easy to tune</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-links">
+                <h4>Contact Regency</h4>
+                <p>1-800-REGENCY<br>Dallas, TX<br>regency@radios.com</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Special Offers</a></li>
+                    <li><a href="about.html">Product Details</a></li>
+                    <li><a href="support.html">Support & Warranty</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="corporate.html">About Regency</a></li>
+                    <li><a href="support.html">Service Centers</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1954 Regency Radio Company. All rights reserved. | Made in USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="reviews-script.js"></script>
+</body>
+</html>
